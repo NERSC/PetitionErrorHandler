@@ -82,5 +82,13 @@ class PetitionErrorHandlersController extends AppController {
     }
     
     $this->set('vv_petitions', $sorted);
+    
+    // Uncomment and set to create a logout redirect target, eg to the desired
+    // enrollment flow to try again. Then, update the "Try Again" URL in
+    // View/PetitionErrorHandlers/lookup.ctp to redirect to the logout URL, eg
+    // https://registry.nersc.gov/registry/users/logout
+    //  or if you need to trigger Apache auth module logout
+    // https://registry.nersc.gov/registry/auth/logout
+    //$this->Session->write('Logout.redirect', "https://nersc.gov");
   }
 }
